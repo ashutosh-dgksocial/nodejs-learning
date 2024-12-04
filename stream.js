@@ -1,28 +1,21 @@
+// ------stream-------
 const fs = require('fs');
+const path = require('path');
 
-const rs = fs.createReadStream('./files/test_stream.txt', { encoding: 'utf8' });
-const ws = fs.createWriteStream('./files/test_stream_copy.txt');
+const rs = fs.createReadStream('./files/oldStream.txt', { encoding: 'utf8' })
 
-rs.on('data', (datachunk) => {
-    if (!ws.write(datachunk)) {
-        // Pause reading if write buffer is full
-        rs.pause();
-    }
-});
+const ws = fs.createWriteStream('./files/newStream.txt');
 
-ws.on('drain', () => {
-    // Resume reading when writable stream is ready
-    rs.resume();
-});
+// rs.on('data', (dataChunk) => {
+//     ws.write(dataChunk);
+// })
+// // Listen for end event on the readable stream
+// rs.on('end', () => {
+//     ws.end(); // Close the writable stream
+// });
+// // Handle finish event for writable stream
+// ws.on('finish', () => {
+//     console.log('File has been written successfully.');
+// });
 
-rs.on('end', () => {
-    ws.end(); // Close writable stream when done
-});
-
-rs.on('error', (err) => {
-    console.error('Error reading file:', err);
-});
-
-ws.on('error', (err) => {
-    console.error('Error writing file:', err);
-});
+rs.pipe(ws)
