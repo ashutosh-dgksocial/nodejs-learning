@@ -1,16 +1,18 @@
 const fsPromise = require("node:fs").promises;
 const path = require("path");
 
-const combineFile = async (params) => {
+const combineFile = async () => {
     try {
-        const data = await fsPromise.readFile(path.join(__dirname, "files", "text.txt"), "utf8");
-        console.log(data);
-        await fsPromise.write(path.join(__dirname, "files", "text.txt"), " _writing_I-AM-WRITING-NEW-TEXT_ ", "utf8");
-        await fsPromise.append(path.join(__dirname, "files", "text.txt"), "\n\n_Appending_I-AM-WRITING-NEW-TEXT_ ");
-        await fsPromise.rename(path.join(__dirname, "files", "text.txt"), path.join(__dirname, "files", "newTxt.txt"));
-        const readNewData = await fsPromise.readFile(path.join(__dirname, "files", "newTxt.txt"), 'newText');
+        const oldData = await fsPromise.readFile(path.join(__dirname, "files", "text.txt"), "utf8");
+        console.log(oldData, "__first_file");
+        await fsPromise.unlink(path.join(__dirname, "files", "text.txt"));
+        await fsPromise.writeFile(path.join(__dirname, "files", "text_2.txt"), oldData);
+        await fsPromise.appendFile(path.join(__dirname, "files", "text_2.txt"), "\n\n_i am appending something new Data {haha---}");
+        await fsPromise.rename(path.join(__dirname, "files", "text_2.txt"), (path.join(__dirname, "files", "text_2.txt")));
+        const newData = await fsPromise.readFile(path.join(__dirname, 'files', 'text_2.txt'), 'utf8');
+        console.log(newData, "__second_file");
 
-        console.log(readNewData);
+
 
     } catch (error) {
         console.error("an error occur");

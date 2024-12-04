@@ -1,0 +1,5 @@
+DATA DATA DATA THIS IS TEXT FILE I AM GOING TO EDIT DATA DATA DATA DATA;
+
+_______what the fuck i am first file_______
+
+_i am appending something new Data {haha---}
