@@ -10,6 +10,16 @@ const PORT = process.env.PORT || 5000;
 //     res.end();
 // })
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json);
+
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.path}`);
+    next();
+})
+
+
+
 app.get('^/$|index(.html)?', (req, res) => {
     // res.send('hello express world');
     res.sendFile(path.join(__dirname, "index.html"));
