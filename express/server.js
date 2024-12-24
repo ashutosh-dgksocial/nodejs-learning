@@ -24,17 +24,19 @@ const corsOptions = {
         }
     }, optionSuccessStatus: 200
 }
+
 app.use(cors(corsOptions));
 // built-in middleware
-app.use(express.static(path.join(__dirname, "public")))
+app.use('/', express.static(path.join(__dirname, "/public")));
+app.use('/subdir', express.static(path.join(__dirname, "/public")));
 
-app.get('/', (req, res) => {
-    res.send('Default / page');
-})
+// Routes
+app.use('/', require('./routes/root'));
+app.use('/subdir', require('./routes/subdir'));
+app.use('/employees', require('./routes/api/employees'));
 
-app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'))
-})
+
+
 // app.get('/*', (req, res) => {
 //     res.status(404).send('404 page')
 // })
@@ -45,7 +47,7 @@ app.all('*', (req, res) => {
 
     } else if (req.accepts('json')) {
         res.json({ error: "404 page " })
-        
+
     } else {
         res.type('txt').send('404 Nahi Found')
     }
