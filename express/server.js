@@ -1,30 +1,16 @@
 
 const express = require('express');
 const app = express();
+exports.app = app;
 const path = require('path');
 const cors = require('cors');
+const corsOptions = require('./config/corsOption')
 const { logger } = require('./middleware/LogEvents');
 const errorHandler = require('./middleware/errorHandler');
-
-
-
 const PORT = process.env.PORT || 3500;
+
 // custom middleware logger
 app.use(logger);
-
-// cross origin resource sharing
-
-const whitelist = ['https://www.google.com', 'http://localhost:3500'];
-const corsOptions = {
-    origin: (origin, callback) => {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        }
-        else {
-            callback(new Error("Not allowed by CORS"));
-        }
-    }, optionSuccessStatus: 200
-}
 
 app.use(cors(corsOptions));
 // body parser middleware:
@@ -32,18 +18,14 @@ app.use(express.json());
 
 // built-in middleware
 app.use('/', express.static(path.join(__dirname, "/public")));
-app.use('/subdir', express.static(path.join(__dirname, "/public")));
 
 // Routes
 app.use('/', require('./routes/root'));
-app.use('/subdir', require('./routes/subdir'));
+app.use('/register', require('./routes/register'));
+app.use('/auth', require('./routes/auth'));
 app.use('/employees', require('./routes/api/employees'));
 
 
-
-// app.get('/*', (req, res) => {
-//     res.status(404).send('404 page')
-// })
 app.all('*', (req, res) => {
     res.status(404);
     if (req.accepts('html')) {

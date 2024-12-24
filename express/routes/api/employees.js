@@ -3,10 +3,13 @@ const router = express.Router();
 const employeesController = require("../../controller/employeeController");
 
 router.route('/')
-    .get().post().put().delete();
+    .get(employeesController.getAllEmployees)
+    .post(employeesController.createNewEmployee)
+    .put(employeesController.updateEmployee)
+    .delete(employeesController.deleteEmployee);
 
 router.route('/:id')
-    .get;
+    .get(employeesController.getEmployee)
 
 
 module.exports = router;
