@@ -7,6 +7,7 @@ const { logger } = require('./middleware/LogEvents');
 const errorHandler = require('./middleware/errorHandler');
 
 
+
 const PORT = process.env.PORT || 3500;
 // custom middleware logger
 app.use(logger);
@@ -26,6 +27,9 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions));
+// body parser middleware:
+app.use(express.json());
+
 // built-in middleware
 app.use('/', express.static(path.join(__dirname, "/public")));
 app.use('/subdir', express.static(path.join(__dirname, "/public")));

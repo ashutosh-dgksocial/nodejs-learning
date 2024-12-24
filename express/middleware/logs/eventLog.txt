@@ -97,3 +97,64 @@
 20241223	18:25:17	41b8d8d4-435e-44d9-923e-a85a9a49972c	GET	undefined	/css/style.css
 20241223	18:25:28	83e34708-168a-4712-9287-cc52bdaf8fb3	GET	undefined	/
 20241223	18:53:06	0adad8b9-047c-4c7f-9aa1-3e933c7bae22	GET	undefined	/employees
+20241224	12:25:36	95dcfda0-2e85-430c-96ef-b99127053838	GET	undefined	/
+20241224	12:25:36	f3643369-6545-43bc-a2fe-0d67414e8a71	GET	undefined	/favicon.ico
+20241224	12:25:40	fc565171-e8f9-4c87-ba8f-55902795e11f	GET	undefined	/home
+20241224	12:25:41	8e6d5d94-cbbb-4967-b4dc-13100446bad3	GET	undefined	/home
+20241224	12:32:30	ab66b7fb-cba3-48cf-a1e6-e4bd83ab0175	GET	undefined	/
+20241224	12:32:35	588788c7-59e7-4363-abb3-ff6e61c7f2cb	GET	undefined	/subdir/home
+20241224	12:32:38	c7333f03-ef89-44cd-b8a9-7306c0ae3290	GET	undefined	/subdir/house
+20241224	12:32:42	9e0a0072-0b34-4dc9-819c-026ddbcc942b	GET	undefined	/house
+20241224	12:32:42	daf0f77c-9bf1-4e51-9c35-7c9084a834c9	GET	undefined	/house
+20241224	12:32:45	e7145c61-8db9-4d2b-b503-94c52289f225	GET	undefined	/home
+20241224	12:32:45	58feee70-265f-4b02-8cc2-b7ffc7af451d	GET	undefined	/home
+20241224	12:32:48	d1c4266c-b649-4cc3-b31d-50671afc86d4	GET	undefined	/subdir/home
+20241224	12:32:52	24068fec-5253-4a58-b889-411446c80c68	GET	undefined	/subdir/test
+20241224	12:32:52	038f6c9f-d91d-4a78-838a-01ef1433cabc	GET	undefined	/subdir/css/style.css
+
+
+///////////\\\\\\\\\\\\\////////////\\\\\\\\\\////////////\\\\\\\\\\\\\////////////\\\\\\\\\\\/\20241224	12:45:54	5d5eb8bd-5ac1-4418-afd1-a01db9293ca6	GET	undefined	/subdir/home
+20241224	12:45:57	e408246e-6867-4fd5-a5b6-497fe66bcd47	GET	undefined	/
+20241224	12:46:14	03322ed7-4538-4a94-a1c1-f2293cb8ab75	GET	undefined	/employees
+20241224	12:47:16	dd968a6d-257a-4232-b5b0-75d670e80bb9	POST	undefined	/employees
+20241224	12:47:16	c18d49dd-acde-428b-bdbc-79b25a4f3682	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	12:48:11	65ce03de-20a2-4401-a6a0-3397b662f166	POST	undefined	/employees
+20241224	12:48:11	49239a0b-17d8-4bea-ba8d-4f34e5820165	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	12:48:41	9acbb122-bbd9-460f-932e-d24144e52898	POST	undefined	/employees
+20241224	12:48:41	ccc16011-1d67-4ab1-9efc-385257333dec	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	12:48:54	76b20105-f810-4f6e-aae9-bbde33b4bdec	POST	undefined	/employees
+20241224	12:48:54	743aa180-6866-4b4a-bb9e-0e2051926e9c	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	12:48:55	bbf61cc7-70ee-4b41-9c9f-8a3394a071e0	POST	undefined	/employees
+20241224	12:48:55	d5b99cb8-d5a2-427d-aa6e-35fbeab1fa1d	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	12:48:56	cc51dfbd-677f-4c8b-8658-9d6a1d9b28b3	POST	undefined	/employees
+20241224	12:48:56	bc9194ce-63ac-4ff2-a736-70b426e5863b	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	12:48:57	1c0f41c2-4b0f-466d-813d-6a262f6785fb	POST	undefined	/employees
+20241224	12:48:57	e1160e81-2c65-4753-85cc-0f628b8bd72c	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	12:48:57	40ca951a-b799-4a51-90e8-6e719beaca00	POST	undefined	/employees
+20241224	12:48:57	e4852079-8e09-4e89-9405-5913c2c0d94d	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	12:52:35	4640f080-a246-40e4-a25e-b2cb2b9ff185	POST	undefined	/employees
+20241224	12:52:35	e54878e2-98e9-44eb-aef5-1e1be33bed33	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	13:01:24	cbecdafd-0d9b-451f-9276-4b5e3b1466b3	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	13:01:24	c10aca95-3ce6-40e3-ad0d-e9ce2ab42d03	POST	undefined	/employees
+20241224	13:07:50	8f3390ea-f21e-47dc-bd84-36719a512433	POST	undefined	/employees
+20241224	13:07:50	da49ef62-c87f-44c3-985b-a35ad8943ea9	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	13:08:07	1c57af81-6214-4ec7-9102-8475003c2585	POST	undefined	/employees
+20241224	13:08:07	3eb94bea-701e-4727-acc6-412ee34a6a0e	TypeError : Cannot read properties of undefined (reading 'firstName')
+20241224	13:09:23	18b282fa-37b7-450c-aff0-f121cfce69bc	POST	undefined	/employees
+20241224	13:10:20	1561e05d-8fb8-4e6f-9876-68a89620843d	POST	undefined	/employees
+20241224	13:11:03	94f934b1-58f2-40bf-9828-6a9708ee42f2	POST	undefined	/employees
+20241224	13:11:08	fe4f39ca-aef1-42a9-986f-115eeb388d48	POST	undefined	/employees
+20241224	13:11:10	01adbbe3-5623-4e7c-83f2-f5ddb3a1c546	POST	undefined	/employees
+20241224	13:11:12	5f231c1f-e9e7-45e5-9f32-d6b9a614a012	POST	undefined	/employees
+20241224	13:12:59	b6ae2350-55f6-4322-af5f-1d4ff1dbf6a9	POST	undefined	/employees
+20241224	13:13:38	67a0d330-4977-4670-b2b0-1b2ec0603b2b	POST	undefined	/employees
+20241224	13:18:49	93272697-677d-40ca-add1-3de29b1d1ed1	POST	undefined	/employees
+20241224	13:19:32	d18a72b6-f85e-4382-9eb2-0c926eb9e5a3	POST	undefined	/employees
+20241224	13:19:49	60e1f64f-ee6c-4941-8c3d-765dbbc09030	POST	undefined	/employees
+20241224	13:20:03	472b34b4-108e-417b-b0ec-8b7a2633ce8c	POST	undefined	/employees
+20241224	13:26:09	abeba860-1b18-4b87-ace1-66cbd02f052c	POST	undefined	/employees
+20241224	13:27:27	e4499789-485c-4c33-9110-bdbb63e49773	PUT	undefined	/employees
+20241224	13:30:26	4517c6fb-f4d6-4016-bb28-8ee7bd7ef587	DELETE	undefined	/employees
+20241224	13:30:32	f93ccf45-2142-4546-8066-7f56472238e2	DELETE	undefined	/employees
+20241224	13:32:06	e6fa860c-aaa5-4e03-a50f-3f8afdd0e453	GET	undefined	/employees/1
+20241224	13:32:15	8ee1ca20-1ad4-4c1b-ba1b-023622ebcab0	GET	undefined	/employees/3
